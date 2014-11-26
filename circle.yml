@@ -1,7 +1,7 @@
 dependencies:
   pre:
     - sudo apt-get update
-    - sudo apt-get install -y distcc distcc-pump
+    - sudo apt-get install -y ocaml autoconf automake libtool distcc distcc-pump
   post:
     - ./bootstrap.sh
     - make
