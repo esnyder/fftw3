@@ -4,7 +4,7 @@ dependencies:
     - sudo apt-get install -y ocaml autoconf automake libtool indent transfig distcc distcc-pump
     - ./bootstrap.sh
   post:
-    - DISTCC_HOSTS="--randomize node0,cpp,lzo node1,cpp,lzo" make -j6 CC=distcc: {parallel: false}
+    - DISTCC_HOSTS="--randomize ubuntu@node1 ubuntu@node2 ubuntu@node3 ubuntu@node4 ubuntu@node5" make -j10 CC=distcc: {parallel: false}
 
 test:
   override:
